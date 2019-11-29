@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="durum" color="success">
+      Users
+    </ion-title>
+    <ion-title *ngIf="!durum" color="danger">
+      Users
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-list>
+  <ion-item *ngFor="let item of veriler">
+    <ion-label>{{item.name}} - {{item.address.city}}</ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content>
